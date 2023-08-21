@@ -8,7 +8,7 @@ const NavbarComponent = () => {
     <header>
 
       <StyledNav>
-        <img src="/bosun-logo.png" style={{ height: "4rem", cursor: "pointer" }} />
+        <img src="/bosun.png" style={{ height: "1.6rem", cursor: "pointer" }} />
         <div style={{ display: "flex", gap: "25px" }}>
 
           {navlinks.map((item) => {
