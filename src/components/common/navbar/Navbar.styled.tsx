@@ -1,37 +1,29 @@
-import Link from "next/link";
 import styled from "styled-components";
-import Image from 'next/image'
 
-const StyledLogo = styled(Image)`
-  height: 34px;
-`;
 const StyledNav = styled.div`
+  color: black;
+  max-width: 760px;
+  height: 5rem;
   display: flex;
-  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: space-between;
-  background: ${props => props.theme.colors.main};
-  text-align: right;
-  padding: 10px 0px;
+  margin: auto;
+  padding: 0 8px;
+
 `;
 
-const StyledNavLink = styled(Link)`
-  /* color: white;
-  text-decoration: none; */
-`;
-
-const NavLinks = styled.div`
-  a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #fff;
-    margin-left: 1em;
-    margin-right: 10px;
-    text-decoration: none;
-
+const StyledNavLink = styled.a`
+  color: black;
+    text-align: center;
+    transition: all 250ms;
+    font-size:18px;
     &:hover {
-      color: #cdcdcd;
+        color: #4790FC;  
+        transform: scale(1.25);
     }
-  }
 `;
 
-export { StyledNav, StyledNavLink, StyledLogo, NavLinks };
+
+
+export { StyledNav, StyledNavLink };
