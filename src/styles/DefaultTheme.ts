@@ -2,12 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
   colors: {
-    yellow: "#FFF129",
-    purple: "#8E69FF",
-    lightpurple: "#A88CFF",
-    blue: "#6951FF",
-    orange: "#FFAA29",
-
+    main: "#4790FC",
     white: "#FAFAFA",
     black: "#363636",
     lightgray: "#E4E7EC", // disable에 쓰이는 color

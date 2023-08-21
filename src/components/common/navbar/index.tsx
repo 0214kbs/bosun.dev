@@ -17,10 +17,6 @@ const NavbarComponent = () => {
               <StyledNavLink
                 href={location}
                 key={title}
-                onClick={() => {
-                  return;
-                }
-                }
               >
                 {title}
               </StyledNavLink>

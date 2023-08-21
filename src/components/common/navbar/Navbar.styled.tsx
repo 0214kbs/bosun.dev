@@ -19,7 +19,7 @@ const StyledNavLink = styled.a`
     transition: all 250ms;
     font-size:18px;
     &:hover {
-        color: #4790FC;  
+        color: ${(props) => props.theme.colors.main}; 
         transform: scale(1.25);
     }
 `;
