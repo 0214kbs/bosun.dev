@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 const StyledNav = styled.div`
   color: black;
-  max-width: 760px;
-  height: 5rem;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   margin: auto;
   padding: 0 8px;
+  height: 5rem;
+
+  max-width: 760px;
+  
   `;
 
 const StyledNavLink = styled.a`
