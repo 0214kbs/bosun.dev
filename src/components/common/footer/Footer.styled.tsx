@@ -7,11 +7,12 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  padding: 4rem;
   transition: all 500ms;
   background-color: white;
   color: black;
+
+  
 `;
 
 const StyledIconContainer = styled.div`
@@ -19,9 +20,9 @@ const StyledIconContainer = styled.div`
   justify-content: center;
   gap: 4px;
   align-items: center;
-  padding-top: 4px;
-  border-top: 2px solid currentColor;
-  width: 36px;
+  padding-top: 20px;
+  border-top: 2px solid ${(props) => props.theme.colors.lightgray};
+  width: 136px;
 
   a {
     transition: transform 500ms;
