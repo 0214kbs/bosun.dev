@@ -1,8 +1,11 @@
-import React from 'react'
+"use client"
+import { StyledContainer } from './Blog.styled'
 
 const BlogPage = () => {
     return (
-        <div>Blog</div>
+        <StyledContainer>
+            <div>Blog</div>
+        </StyledContainer>
     )
 }
 
