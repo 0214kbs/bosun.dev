@@ -4,6 +4,7 @@ import StyledComponentsRegistry from "./lib/registry";
 import "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import theme from "../styles/DefaultTheme";
+import Footer from "@/components/common/footer";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <StyledComponentsRegistry>
             <Navbar />
             {children}
+            <Footer />
           </StyledComponentsRegistry>
         </body>
       </ThemeProvider>
