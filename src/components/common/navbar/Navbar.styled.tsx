@@ -10,11 +10,11 @@ const StyledNav = styled.div`
   justify-content: space-between;
   margin: auto;
   padding: 0 8px;
-
-`;
+  `;
 
 const StyledNavLink = styled.a`
-  color: black;
+    font-family:${(props) => props.theme.fonts.EnglishFontBold};
+    color: black;
     text-align: center;
     transition: all 250ms;
     font-size:18px;

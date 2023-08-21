@@ -3,9 +3,34 @@
   word-break: keep-all;
   -ms-overflow-style: none;
   transition: all ease 0.08s 0s;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; */
+  /* font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
 }
 
+@font-face {
+  font-family: "HangeulFontMedium";
+  src: url("./fonts/SUIT-Medium.ttf");
+}
+
+@font-face {
+  font-family: "HangeulFontRegular";
+  src: url("./fonts/SUIT-Regular.ttf");
+}
+
+@font-face {
+  font-family: "HangeulFontSemiBold";
+  src: url("./fonts/SUIT-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "EnglishFontBold";
+  src: url("./fonts/PPNeueMachina-InktrapUltrabold.otf");
+}
+
+@font-face {
+  font-family: "EnglishFontLight";
+  src: url("./fonts/PPNeueMachina-PlainLight.otf");
+}
 
 ::-webkit-scrollbar {
   display: none;

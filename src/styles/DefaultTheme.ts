@@ -8,7 +8,13 @@ const theme: DefaultTheme = {
     lightgray: "#E4E7EC", // disable에 쓰이는 color
     gray: "rgba(0, 0, 0, 0.50)", // 진한 회색 글씨
   },
-
+  fonts: {
+    HangeulFontMedium: "HangeulFontMedium",
+    HangeulFontRegular: "HangeulFontRegular",
+    HangeulFontSemiBold: "HangeulFontSemiBold",
+    EnglishFontBold: "EnglishFontBold",
+    EnglishFontLight: "EnglishFontLight",
+  },
   fontSizes: {
     xsmall: "12px",
     small: "16px",
