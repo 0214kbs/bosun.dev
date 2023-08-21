@@ -1,10 +1,20 @@
 "use client"
-import { StyledContainer } from './Blog.styled'
+import theme from '@/styles/DefaultTheme'
+import { StyledContainer, StyledText } from './Blog.styled'
+import Blogpost from '@/components/blogpost'
 
 const BlogPage = () => {
     return (
         <StyledContainer>
-            <div>Blog</div>
+            <h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large }}> Blog </h1>
+            <StyledText>공유하고 싶거나 다시 보고 싶은 기술들을 정리합니다.</StyledText>
+
+            <div style={{ marginTop: "40px" }}>
+
+                <Blogpost />
+                <Blogpost />
+                <Blogpost />
+            </div>
         </StyledContainer>
     )
 }
