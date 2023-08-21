@@ -3,7 +3,9 @@
   word-break: keep-all;
   -ms-overflow-style: none;
   transition: all ease 0.08s 0s;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -122,10 +124,12 @@ ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -133,6 +137,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
