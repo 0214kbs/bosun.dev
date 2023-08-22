@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StyledLink, StyledDate, StyledTitle, StyledDescription } from "./Blogpost.styled";
+import { StyledLink, StyledDate, StyledTitle, StyledDescription } from "./Blogpostcard.styled";
 interface BlogPostProps {
     date: string;
     title: string;
@@ -7,7 +7,7 @@ interface BlogPostProps {
     slug: string;
 }
 
-const Blogpost = ({ date, title, des, slug }: BlogPostProps) => {
+const Blogpostcard = ({ date, title, des, slug }: BlogPostProps) => {
     console.log(slug)
     return (
         <Link href={`/blog/${slug}`}>
@@ -20,4 +20,4 @@ const Blogpost = ({ date, title, des, slug }: BlogPostProps) => {
     );
 };
 
-export default Blogpost;
+export default Blogpostcard;

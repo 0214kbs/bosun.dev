@@ -1,7 +1,7 @@
 "use client"
 import theme from '@/styles/DefaultTheme'
 import { StyledContainer, StyledText } from './Blog.styled'
-import Blogpost from '@/components/blogpost'
+import Blogpostcard from '@/components/blogpostcard'
 
 const BlogPage = ({ posts }: any) => {
     console.log(posts);
@@ -13,7 +13,7 @@ const BlogPage = ({ posts }: any) => {
             <div style={{ marginTop: "40px" }}>
 
                 {posts.map((post: any) => (
-                    <Blogpost
+                    <Blogpostcard
                         date={post.date}
                         title={post.title}
                         des={post.description}
