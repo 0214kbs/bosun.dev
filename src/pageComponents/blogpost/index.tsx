@@ -9,9 +9,9 @@ const Blogpost = ({ post }: any) => {
 
     return (
         <StyledContainer>
-            <StyledPost>
+            <StyledPost className="mdxdesign">
                 <StyledTitle>{post.title}</StyledTitle>
-                <MDXComponent />
+                <MDXComponent className="mdxdesign" />
             </StyledPost>
         </StyledContainer>
     )

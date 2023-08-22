@@ -124,6 +124,36 @@ video {
   list-style: none;
 }
 
+.mdxdesign * {
+  margin: 4px;
+  padding: revert;
+  border: revert;
+  vertical-align: revert;
+  list-style: revert;
+}
+
+.mdxdesign pre {
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.mdxdesign h1 {
+  padding-top: 20px;
+}
+
+.mdxdesign h2 {
+  padding-top: 15px;
+}
+
+.mdxdesign h3 {
+  padding-top: 10px;
+}
+
+
+.mdxdesign li {
+  padding-top: 5px;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
