@@ -1,13 +1,20 @@
 import Link from "next/link";
 import { StyledLink, StyledDate, StyledTitle, StyledDescription } from "./Blogpost.styled";
+interface BlogPostProps {
+    date: string;
+    title: string;
+    des: string;
+    slug: string;
+}
 
-const Blogpost = () => {
+const Blogpost = ({ date, title, des, slug }: BlogPostProps) => {
+    console.log(slug)
     return (
-        <Link href="/blog">
+        <Link href={`/blog/${slug}`}>
             <StyledLink>
-                <StyledDate>2022.02.10</StyledDate>
-                <StyledTitle>💙 게시물 제목이 나타납니다.</StyledTitle>
-                <StyledDescription>게시물 설명이 나타납니다.</StyledDescription>
+                <StyledDate>{date}</StyledDate>
+                <StyledTitle>{title}</StyledTitle>
+                <StyledDescription>{des}</StyledDescription>
             </StyledLink>
         </Link>
     );

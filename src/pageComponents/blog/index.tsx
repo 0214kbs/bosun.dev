@@ -3,7 +3,8 @@ import theme from '@/styles/DefaultTheme'
 import { StyledContainer, StyledText } from './Blog.styled'
 import Blogpost from '@/components/blogpost'
 
-const BlogPage = () => {
+const BlogPage = ({ posts }: any) => {
+    console.log(posts);
     return (
         <StyledContainer>
             <h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large }}> Blog </h1>
@@ -11,12 +12,19 @@ const BlogPage = () => {
 
             <div style={{ marginTop: "40px" }}>
 
-                <Blogpost />
-                <Blogpost />
-                <Blogpost />
+                {posts.map((post: any) => (
+                    <Blogpost
+                        date={post.date}
+                        title={post.title}
+                        des={post.description}
+                        slug={post._raw.flattenedPath}
+                        key={post._id}
+                    />
+                ))}
             </div>
         </StyledContainer>
     )
 }
+
 
 export default BlogPage
