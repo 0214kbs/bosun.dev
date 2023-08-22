@@ -5,11 +5,16 @@ import "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import theme from "../styles/DefaultTheme";
 import Footer from "@/components/common/footer";
+import metadata from "@/data/metadata";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
   return (
     <html>
       <head>
-        <title>Bosun's blog</title>
+        <title>{metadata.title}</title>
+        <meta content={metadata.description} name="description" />
+        <meta property="og:site_name" content={metadata.author} />
       </head>
       <ThemeProvider theme={theme}>
         <body>
