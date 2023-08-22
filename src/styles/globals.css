@@ -1,11 +1,3 @@
-* {
-  box-sizing: border-box;
-  word-break: keep-all;
-  -ms-overflow-style: none;
-  transition: all ease 0.08s 0s;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-}
-
 @font-face {
   font-family: "HangeulFontMedium";
   src: url("./fonts/SUIT-Medium.ttf");
@@ -29,6 +21,14 @@
 @font-face {
   font-family: "EnglishFontLight";
   src: url("./fonts/PPNeueMachina-PlainLight.otf");
+}
+
+* {
+  box-sizing: border-box;
+  word-break: keep-all;
+  -ms-overflow-style: none;
+  transition: all ease 0.08s 0s;
+  font-family: HangeulFontRegular, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 ::-webkit-scrollbar {
