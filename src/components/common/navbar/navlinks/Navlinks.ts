@@ -1,6 +1,6 @@
 const navlinks: { title: string; location: string }[] = [
-    { title: "Home", location: "/" },
-    { title: "Blog", location: "/blog" },
+	{ title: "Home", location: "/" },
+	{ title: "Blog", location: "/blog" },
 ];
 
 export default navlinks;
