@@ -1,6 +1,6 @@
 "use client";
 import navlinks from "./navlinks/Navlinks";
-import { StyledNav, StyledNavLink } from "./NavBar.styled";
+import { StyledNav, StyledNavLink } from "./Navbar.styled";
 
 const NavbarComponent = () => {
 
