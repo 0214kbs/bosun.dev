@@ -31,6 +31,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.10",
     "@storybook/addon-essentials": "^7.0.26",
     "@storybook/addon-interactions": "^7.0.26",
     "@storybook/addon-links": "^7.0.26",
@@ -38,19 +39,18 @@
     "@storybook/nextjs": "^7.0.26",
     "@storybook/react": "^7.0.26",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.47.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.6.12",
     "next-sitemap": "^4.2.2",
-    "prettier": "^3.0.0",
+    "prettier": "^3.0.2",
     "storybook": "^7.0.26"
   }
 }
