@@ -5,7 +5,6 @@ import { StyledContainer, StyledText } from "./Blog.styled";
 import Blogpostcard from "@/components/blogpostcard";
 
 function BlogPage({ posts }: any) {
-	console.log(posts);
 	return (
 		<StyledContainer>
 			<h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large }}> Blog </h1>

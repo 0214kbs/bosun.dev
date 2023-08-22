@@ -9,6 +9,7 @@ interface BlogPostProps {
 }
 
 function Blogpostcard({ date, title, des, slug }: BlogPostProps) {
+	console.log(title);
 	return (
 		<Link href={`/blog/${slug}`}>
 			<StyledLink>

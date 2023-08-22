@@ -4,7 +4,7 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { StyledContainer, StyledTitle, StyledPost } from "./Blogpost.styled";
 
 function Blogpost({ post }: any) {
-	console.log(post.body.code);
+	// console.log(post.body.code);
 	const MDXComponent = useMDXComponent(post.body.code);
 
 	return (
