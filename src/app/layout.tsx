@@ -8,6 +8,9 @@ import Footer from "@/components/common/footer";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
+      <head>
+        <title>Bosun's blog</title>
+      </head>
       <ThemeProvider theme={theme}>
         <body>
           <StyledComponentsRegistry>

@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 const StyledLink = styled.div`
     width: 100%;
-    margin: 0.875rem 0;
+    margin: 1rem 0;
 
     &:hover {
         transform: translateX(-0.375rem);
     }
-
     
     `;
 
