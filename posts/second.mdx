@@ -1,18 +1,222 @@
 ---
-title: nextjs13 으로 블로그 만들기
+title: callback과 promise 차이
 date: 2023-08-22
-description: nextjs13, typescript, 등을 이용해 개인 블로그 페이지 만드는 방법
+description: callback과 promise 차이
 ---
 
-# 사용한 기술 스택
-React 18 + Next.js 13 + Typescript
-- `styled-component`
-- `node.js` v16.20.1
+## Summary
 
-# 나중에 추가로 이어서 작성 예정
+- callback 은 비동기 처리의 초기방식이었지만, 중첩된 구조로 인해 가독성 문제가 발생
+- 이를 해결하기 위해 promise 등장. 하지만 코드가 조금 복잡하다는 단점
+- async/await은 promise를 기반으로 한 비동기 처리를 동기식으로 보이게 하는 방식으로 가장 깔끔하고 직관적인 코드 제공
 
-## 2
+## Callback
 
-### 3
+### Concept
 
-내용 
+다른 함수가 실행을 끝낸 뒤 실행되는 callback 함수 
+
+- 비동기 연산에서 자주 사용
+- 특정 연산이나 요청이 완료된 후에 실행되어야 할 로직을 정의하는 데 사용됨
+
+```
+function print(callback) {
+    callback();
+}
+```
+
+- print 함수 : 다른함수를 파라미터로 받아서 내부에서 호출하는 것 ⇒ “ 콜백”
+
+### Advantages
+
+1. 비동기 처리 
+    
+    비동기작업이 완료되었을 때, 콜백함수가 실행됨
+    
+    → 비동기 처리를 통해 다른 작업을 기다리는 동안 다른 작업수행가능
+    
+    ex) 웹 API로부터 데이터를 요청하면 서버가 응답할 때까지 기다리는 동안 다른 코드들이 실행 가능
+    
+2. 이벤트 핸들링
+    
+    이벤트 리스너를 사용하여 특정 이벤트가 발생할 때 액션 수행 ⇒ 액션을 콜백함수로 정의
+    
+3. 함수의 재사용성 & 유연성
+    - 동작로직을 분리할 수 있음
+        
+        고차함수(map, filter, reduce, 등)는 콜백함수를 매개변수로 받음,, 내부 로직이 미리 정의되어 있지만, 실제로 어떤 작업을 수행할지는 콜백함수를 통해 결정됨 
+        
+        ⇒ 동일한 메서들를 다양한 용도로 재사용 가능
+        
+
+### Disadvantages
+
+1. 가독성 & 유지보수성
+    
+    콜백함수가 중첩되거나 많은 비동기 호출이 연속해서 일어나면 코드의 가독성 저하. 
+    
+2. 비동기 코드 복잡성
+    
+    여러 비동기 작업이 연속해서 발생하거나 의존성을 가지는 경우, `callback hell` 발생 가능 
+    
+
+⇒ Promise와 async/await과 같은 비동기 패턴을 사용하여 해결.,
+
+### Example Case
+
+- ex1
+    
+    ```jsx
+    function introduce (lastName, firstName, callback) { 
+    	var fullName = lastName + firstName; 
+    	callback(fullName); 
+    } 
+    
+    introduce("홍", "길동", function(name) { 
+    	console.log(name); 
+        };
+    ```
+    
+    introduce : lastName, firstName, callback 매개변수. 
+    
+    introduce 함수 호출시..
+    
+    1. lastName, firstName에 “홍”, “길동” 할당
+    2. fullName : “홍길동”
+    3. callback함수 호출 : fullName 값을 익명 함수의 ‘name’ 매개변수로 전달됨 
+    4. 홍길동 콘솔에 출력
+    
+    - 익명 함수?
+        
+        자바스크립트에서 이름이 없는 함수 정의
+        
+    
+
+## Promise
+
+### Concept
+
+- **정의** : 비동기 연산의 결과를 대표하는 객체. 비동기 작업의 결과값을 나타냄
+- **상태**
+    - `pending` : 초기 상태, 결과값 X
+    - `fulfilled` : 작업이 성공적으로 완료됨
+    - `rejected` : 작업이 실패함
+- Promise가 결과나 오류를 처리하기 위해 제공하는 **메서드**
+    - `.then()` : Promise가 성공적으로 완료될 때 호출될 콜백 함수
+    - `.catch():` Promise에서 오류가 발생할 때 호출될 콜백 함수
+    - `.finally()` : Promise가 성공하든 실패하든 관계없이 항상 호출되는 콜백 함수
+    
+- **Promise Chaining :** 여러 비동기 작업을 순차적 또는 병렬로 연결하여 실행
+    - `.then` : 항상 새로운 Promise 를 반환
+    - 반환된 Promise는 **`.then()`** 또는 **`.catch()`** 핸들러 내에서 반환한 값에 따라 완료 상태 변경
+    - 반환된 값이 Promise라면, 상태완료될때까지 기다림..
+    
+- **용어 정리**
+    - 비동기 연산 : 일반적으로 즉시 완료되지 않고 일정 시간이 걸리는 연산
+
+### **Advantages**
+
+1. 코드의 가독성 향상 및 확장성
+    - 특정 문제를 해결하기 위한 확장이 쉬움 (다양한 유틸리티와 라이브러리가 Promise 기반으로 작성되어 있음)
+2. **연속적인 비동기 작업을 깔끔하게 구성**
+    - 여러 비동기 작업을 순서대로 실행할 때, Promise chaining을 사용하여 깔끔한 구현이 가능
+        - `.then()` → 여러 비동기 작업을 체인으로 연결
+3. **오류 처리**
+    - `.catch()` 블럭에서 중앙 집중식으로 오류 처리 가능
+    - 여러 콜백에서 발생하는 오류를 한 곳에서 처리 가능
+4. **동시성** 
+    - `Promise.all( )` , `Promise.race( )`→ 여러 비동기 작업 동시에 실행 가능
+5. **async/await와의 통합**
+    - ES7의 **async/await :** Promise 기반으로 동작함
+        - → 비동기 코드를 동기코드처럼 작성 가능
+
+### **Disadvantages**
+
+1. **Unhandled Promise Rejections**
+    - Promise가 reject되었을 때, 해당 오류를 적절하게 처리하지 않았을 경우 발생하는 에러
+    - 해결방법
+        - .catch() 이나 try/catch 구문(async/await) 사용하여 Promise에서 발생하는 오류 처리
+        - Node.js : `process.on('unhandledRejection', handler)` : unhandled rejection 감지 가능
+    
+2. **Memory Overhead**
+    - 많은 양의 Promise → 메모리 사용량 증가
+    - 많은 수의 비동기 작업이 있을때..
+    - 해결 방법
+        - 필요할 때만 Promise 생성
+        - 대용량 데이터 처리 → pagination, lazy loading, 스트리밍
+    
+3. **Error Propagation** 
+    - `.then` 체인 중간에 오류가 발생하면 그 후의 `.then`은 모두 건너뛰고 가장 가까운 `.catch`로 이동 → 원하는 결과가 안 나올 수 있음
+        
+        
+4. **Complexity with Parallel Operations**
+    - `Promise.all` / `Promise.race`  : 여러 Promise 동시에 실행
+        
+        → 코드의 복잡성 증가시킬 수 있음
+        
+    - 해결방법
+        - 라이브러리나 helper 함수를 사용하여 복잡도를 줄임
+            - `async/await`을 사용하면 코드 간결하게 할 수 있음
+    
+5. **Callback Hell**
+    - Promise를 통해 Callback Hell문제를 해결할 수도 있기 한데 `.then` 체인을 너무 중첩시켜서 사용하면 복잡성은 여전히 높을 수 있음
+    - 해결방법
+        - `async/await` 사용!
+        - 필요한 경우, 함수 분리, 모듈화, 재사용
+    
+6. **Overhead of Creating Promises** 
+    - 간단한 작업에 대해 Promise를 사용하면 불필요한 오버헤드 발생 가능
+    
+7. **Difficulty with Cancellation**
+    - 기본 Promise : 작업 취소 기능이 없음
+    - 비동기 작업 시작 한 후 그 작업을 취소하려면 추가적인 구현 필요
+        - `AbortController` 같은 라이브러니나 기능사용 (취소 기능 구현)
+    
+8. **Potential Delays** 
+    - Promise는 항상 비동기적으로 처리됨 → 지연 O
+        
+        `Promise.resolve().then(() => console.log('2'))`
+        
+         `console.log('1')` 
+        
+        → 1을 먼저 출력함 
+        
+    - 해결방법
+        - 동기적인 동작 보장 → `setImmediate` 나 `process.nextTick` (Node.js)
+        
+
+⇒ async/await
+
+### **Example Case**
+
+```jsx
+function addAsync(a, b) {
+    return new Promise((resolve, reject) => {
+        if (typeof a !== 'number' || typeof b !== 'number') {
+            reject('두 인수 모두 숫자여야 합니다.');
+        } else {
+            resolve(a + b);
+        }
+    });
+}
+
+// Promise 사용 예시
+addAsync(5, 3)
+    .then((sum) => {
+        console.log(sum); // 8
+    })
+    .catch((error) => {
+        console.error("오류:", error);
+    });
+
+// 잘못된 인수를 제공한 경우
+addAsync(5, "안녕")
+    .then((sum) => {
+        console.log(sum);
+    })
+    .catch((error) => {
+        console.error("오류:", error); // 오류: 두 인수 모두 숫자여야 합니다.
+    });
+```
+
+- addAsync 함수 : 두 숫자를 받아서 합계 반환하는 “promise” 생성

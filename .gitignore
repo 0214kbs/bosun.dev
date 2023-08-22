@@ -18,6 +18,7 @@
 # contentlayer
 .contentlayer
 /.contentlayer
+/.contentlayer/
 
 # misc
 .DS_Store

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledLink = styled.div`
     width: 100%;
-    margin: 1rem 0;
+    margin: 2.4rem 0;
 
     &:hover {
         transform: translateX(-0.375rem);
