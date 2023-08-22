@@ -4,13 +4,13 @@
     "es6": true,
     "node": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended",
     "eslint:recommended",
     "plugin:react/recommended",
+    "next/core-web-vitals",
     "airbnb",
+    "plugin:storybook/recommended",
     "plugin:prettier/recommended"
   ],
   "settings": {
@@ -29,7 +29,6 @@
   },
   "plugins": [
     "react",
-    "react-hooks",
     "prettier"
   ],
   "rules": {
