@@ -13,7 +13,6 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
       border: 1px solid ${lightgray};
       line-height: 1;
       height: 45px;
-      padding: 10px;
       width:100%;
       background-color: ${bgcolor};
       color: ${color};
