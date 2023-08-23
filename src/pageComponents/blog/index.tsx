@@ -5,6 +5,7 @@ import { StyledContainer, StyledText } from "./Blog.styled";
 import Blogpostcard from "@/components/blogpostcard";
 import { useState } from "react";
 import { categories } from "@/data/category";
+import Button from "@/components/button";
 
 function BlogPage({ posts }: any) {
 	const [select, setSelect] = useState<string>('');
@@ -12,34 +13,29 @@ function BlogPage({ posts }: any) {
 	console.log(posts);
 
 	return (
-		<StyledContainer>
-			<h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large }}> Blog </h1>
-			<StyledText>공유하고 싶거나 다시 보고 싶은 기술들을 정리합니다.</StyledText>
 
-			<div style={{ marginTop: "20px", marginBottom: "40px" }}>
+		<StyledContainer>
+			<h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large, textAlign: "center" }}> Blog </h1>
+			<StyledText style={{ textAlign: "center" }}>공유하고 싶거나 다시 보고 싶은 기술들을 정리합니다.</StyledText>
+			<div style={{ marginTop: "40px", display: "flex" }}>
 				{categories.map((category) => (
-					<button
-						key={category.keyword}
-						onClick={() => setSelect(category.keyword === '' ? '' : category.keyword)}
-						style={{
-							margin: '5px',
-							padding: '10px',
-							background: select === category.keyword ? 'lightgray' : 'transparent',
-							border: '1px solid gray',
-							borderRadius: '5px',
-							cursor: 'pointer'
-						}}
-					>
-						{category.title}
-					</button>
+					<div style={{ margin: "5px", width: "140px" }}>
+						<Button
+							label={category.title}
+							bgcolor={select === category.keyword ? theme.colors.main : 'white'}
+							onClick={() => setSelect(category.keyword === '' ? '' : category.keyword)}
+							color="black"
+						/>
+					</div>
+
 				))}
-			</div>
+			</div >
 			<div style={{ marginTop: "40px" }}>
 				{filteredPosts.map((post: any) => (
 					<Blogpostcard date={post.date} title={post.title} des={post.description} slug={post._raw.flattenedPath} key={post._id} />
 				))}
 			</div>
-		</StyledContainer>
+		</StyledContainer >
 	);
 }
 
