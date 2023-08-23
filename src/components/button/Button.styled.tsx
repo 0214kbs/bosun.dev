@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ButtonStyles } from "./button.type";
+import { ButtonStyles } from "./Button.type";
 
 const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
   ${(props) => {
