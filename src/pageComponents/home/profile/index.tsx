@@ -4,7 +4,7 @@ import { StyledImg, StyledRight, StyledText } from "./Profile.styled";
 function Profile() {
 	return (
 		<section>
-			<h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large }}> About Me </h1>
+			<h1 style={{ fontFamily: theme.fonts.HangeulFontMedium, fontSize: theme.fontSizes.large, textAlign: "center" }}> About Me </h1>
 			<div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
 				<StyledImg src="/profile.jpg" alt="profile" />
 				<StyledRight>
