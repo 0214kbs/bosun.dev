@@ -11,7 +11,7 @@ const StyledPost = styled.div`
 `;
 
 const StyledContainer = styled.div`
-	max-width: 740px;
+	max-width: 780px;
 	margin: auto;
 	padding: 0 8px;
 	padding-top: 3rem;

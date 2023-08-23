@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 function NavbarComponent() {
 	const router = useRouter();
 	return (
-		<header style={{ position: "fixed", width: "100%", zIndex: "100", backgroundColor: "white" }}>
+		<header style={{ position: "fixed", width: "100%", zIndex: "100", backgroundColor: "white", borderBottom: "2px solid #ececec" }}>
 			<StyledNav>
 				<img
 					src="/bosun.png"

@@ -9,7 +9,7 @@ const StyledNav = styled.div`
 	padding: 0 8px;
 	height: 5rem;
 
-	max-width: 760px;
+	max-width: 800px;
 `;
 
 const StyledNavLink = styled.a`
