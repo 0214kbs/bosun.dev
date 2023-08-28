@@ -1,8 +1,14 @@
 "use client";
-import { StyledContainer } from "./Projects.styled";
+import { StyledContainer, StyledText } from "./Projects.styled";
 
 const ProjectPage = () => {
-	return <StyledContainer>ProjectPage</StyledContainer>;
+	return (
+		<StyledContainer>
+			<StyledText>
+				Projects
+			</StyledText>
+		</StyledContainer>
+	);
 };
 
 export default ProjectPage;

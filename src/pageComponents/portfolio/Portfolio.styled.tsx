@@ -6,6 +6,7 @@ const StyledContainer = styled.div`
 	padding: 0 8px;
 	padding-top: 6.5rem;
 `;
+
 const StyledText = styled.h1`
 	font-family: ${(props) => props.theme.fonts.HangeulFontMedium};
     font-size: ${(props) => props.theme.fontSizes.large};

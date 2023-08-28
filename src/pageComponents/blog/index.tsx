@@ -10,7 +10,7 @@ import Button from "@/components/button";
 function BlogPage({ posts }: any) {
 	const [select, setSelect] = useState<string>('');
 	const filteredPosts = select === '' ? posts : posts.filter((post: any) => post.category.trim() === select);
-	console.log(posts);
+	// console.log(posts);
 
 	return (
 
