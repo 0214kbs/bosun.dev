@@ -7,8 +7,26 @@ const Table = ({ headers, data }: any) => {
 				<tbody>
 					{data.map((row: any, rowIndex: any) => (
 						<tr key={rowIndex}>
-							<StyledHeader>{headers[rowIndex]}</StyledHeader>
-							<StyledData>{row}</StyledData>
+							<StyledHeader>
+								{Array.isArray(headers[rowIndex])
+									? headers[rowIndex].map((line: any, lineIndex: any) => (
+											<span key={lineIndex}>
+												{line}
+												{lineIndex !== headers[rowIndex].length - 1 && <br />}
+											</span>
+									  ))
+									: headers[rowIndex]}
+							</StyledHeader>
+							<StyledData>
+								{Array.isArray(row)
+									? row.map((line, lineIndex) => (
+											<span key={lineIndex}>
+												{line}
+												{lineIndex !== row.length - 1 && <br />}
+											</span>
+									  ))
+									: row}
+							</StyledData>
 						</tr>
 					))}
 				</tbody>

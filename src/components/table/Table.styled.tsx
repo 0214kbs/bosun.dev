@@ -9,7 +9,7 @@ const StyledHeader = styled.td.attrs<any>((props) => ({}))`
 			padding: 10px 5px;
 			font-size: 17px;
 			color: ${(props) => props.theme.colors.black};
-			text-align: left;
+			text-align: right;
 
 			position: relative;
 			&::before {
