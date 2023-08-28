@@ -6,7 +6,7 @@ const StyledHeader = styled.td.attrs<any>((props) => ({}))`
 		const main = props.theme.colors.main;
 		return css`
 			font-family: ${font};
-			padding: 10px 5px;
+			padding: 6px 5px;
 			font-size: 17px;
 			color: ${(props) => props.theme.colors.black};
 			text-align: right;

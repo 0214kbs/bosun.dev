@@ -4,7 +4,7 @@ import { StyledImg, StyledRight, StyledText } from "./Profile.styled";
 function Profile() {
 	return (
 		<section>
-			<div style={{ display: "flex", gap: "20px", marginTop: "20px", padding: "20px" }}>
+			<div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px", padding: "20px" }}>
 				<StyledImg src="/profile.jpg" alt="profile" />
 				<StyledRight>
 					<div>

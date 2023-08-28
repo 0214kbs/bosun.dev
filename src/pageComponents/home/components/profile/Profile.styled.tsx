@@ -6,7 +6,7 @@ const StyledImg = styled.img`
 	height: 390.938px;
 `;
 const StyledRight = styled.div`
-	width: 100%;
+	width: 55%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
