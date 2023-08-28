@@ -13,8 +13,12 @@ const StyledTitle = styled.h1`
 
 	padding-top: 10px;
 `;
+
 const StyledText = styled.div`
 	font-family: ${(props) => props.theme.fonts.HangeulFontRegular};
 	padding-top: 10px;
+	text-align: center;
+	font-size: ${(props) => props.theme.fontSizes.medium};
 `;
+
 export { StyledContainer, StyledTitle, StyledText };
