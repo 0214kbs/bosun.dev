@@ -7,4 +7,24 @@ const StyledContainer = styled.div`
 	padding-top: 6.5rem;
 `;
 
-export { StyledContainer };
+const StyledTitle = styled.h1`
+	font-family: ${(props) => props.theme.fonts.HangeulFontMedium};
+	font-size: ${(props) => props.theme.fontSizes.large};
+	text-align: center;
+
+	padding-top: 10px;
+`;
+
+const StyledText = styled.div`
+	font-family: ${(props) => props.theme.fonts.HangeulFontRegular};
+	padding-top: 10px;
+`;
+
+const StyledTableTitle = styled.h1`
+	font-family: ${(props) => props.theme.fonts.HangeulFontMedium};
+	font-size: ${(props) => props.theme.fontSizes.mediumlarge};
+	/* text-align: center; */
+	margin-top: 40px;
+`;
+
+export { StyledContainer, StyledTitle, StyledText, StyledTableTitle };
