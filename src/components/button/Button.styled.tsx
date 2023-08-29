@@ -16,7 +16,7 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
       width:100%;
       background-color: ${bgcolor};
       color: ${color};
-      border-radius: 10px;
+      border-radius: 1rem;
         &:hover{
           opacity:0.5;
         }
