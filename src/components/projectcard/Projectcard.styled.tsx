@@ -9,7 +9,7 @@ const StyledProjectcard = styled.div.attrs<any>((props) => ({}))`
       flex-direction: column;
       justify-content: space-around;
       border: 1.5px solid ${lightgray};
-      width:385px;
+      width:325px;
       border-radius: 1rem;
       padding:15px;
       gap:15px;

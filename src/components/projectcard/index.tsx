@@ -5,7 +5,7 @@ import { ProjectcardProps } from "./Projectcard.type"
 const Projectcard = (props: ProjectcardProps) => {
     return (
         <StyledProjectcard>
-            <img src={props.imgsrc} alt="projectsimg" style={{ width: "356px", height: "180px", borderRadius: "1rem" }} />
+            <img src={props.imgsrc} alt="projectsimg" style={{ width: "290px", height: "180px", borderRadius: "1rem" }} />
             <div style={{ display: "flex", flexDirection: "column" }}>
                 <StyledDate> {props.date} </StyledDate>
                 <StyledPrjTitle>{props.title}</StyledPrjTitle>
