@@ -1,15 +1,9 @@
 import Link from "next/link";
 import { StyledLink, StyledDate, StyledTitle, StyledDescription } from "./Blogpostcard.styled";
-
-interface BlogPostProps {
-	date: string;
-	title: string;
-	des: string;
-	slug: string;
-}
+import { BlogPostProps } from "./Blogpostcard.type";
 
 function Blogpostcard({ date, title, des, slug }: BlogPostProps) {
-	console.log(title);
+	// console.log(title);
 	return (
 		<Link href={`/blog/${slug}`}>
 			<StyledLink>
