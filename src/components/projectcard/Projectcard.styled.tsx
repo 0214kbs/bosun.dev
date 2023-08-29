@@ -8,11 +8,11 @@ const StyledProjectcard = styled.div.attrs<any>((props) => ({}))`
       display:flex;
       flex-direction: column;
       justify-content: space-around;
-      border: 0.8px solid ${lightgray};
-      height: 365px;
+      border: 1.5px solid ${lightgray};
       width:385px;
       border-radius: 1rem;
       padding:15px;
+      gap:15px;
       `;
   }};
 `;
