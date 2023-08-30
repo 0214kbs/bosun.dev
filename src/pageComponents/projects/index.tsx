@@ -45,7 +45,7 @@ const ProjectPage = () => {
 				<Projectcard
 					title="IoT Malware Prediction"
 					date="2022.12.08 ~ 2022.12.23 (6명)"
-					imgsrc="/projects/ai.png"
+					imgsrc="/projects/aiprj.png"
 					content="변종 악성코드에 대한 대비를 위한 최적의 악성코드 분류 모델 생성 프로젝트입니다. "
 					stacks={["/stack/python-color.svg", "/stack/pandas-color.svg", "/stack/scikitlearn-color.svg"]}
 					gitlink="https://github.com/0214kbs/Gaejibsa-chatting"
