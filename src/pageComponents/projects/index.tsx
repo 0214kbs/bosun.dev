@@ -43,6 +43,15 @@ const ProjectPage = () => {
 					gitlink="https://github.com/0214kbs/trip"
 				/>
 				<Projectcard
+					title="IoT Malware Prediction"
+					date="2022.12.08 ~ 2022.12.23 (6명)"
+					imgsrc="/projects/ai.png"
+					content="변종 악성코드에 대한 대비를 위한 최적의 악성코드 분류 모델 생성 프로젝트입니다. "
+					stacks={["/stack/python-color.svg", "/stack/pandas-color.svg", "/stack/scikitlearn-color.svg"]}
+					gitlink="https://github.com/0214kbs/Gaejibsa-chatting"
+					postlink="https://docs.google.com/presentation/d/1fk4Ibf3iJeZMl80REqDOVnXGhMbsRvEJ/edit?usp=sharing&ouid=101191707180351934779&rtpof=true&sd=true"
+				/>
+				<Projectcard
 					title="개집사"
 					date="2021.07.26 ~ 2021.08.07 (5명)"
 					imgsrc="/projects/dogapp.png"
