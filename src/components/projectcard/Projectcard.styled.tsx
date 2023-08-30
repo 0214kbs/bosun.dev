@@ -13,6 +13,7 @@ const StyledProjectcard = styled.div.attrs<any>((props) => ({}))`
       border-radius: 1rem;
       padding:15px;
       gap:15px;
+      margin-bottom: 15px;
       `;
   }};
 `;

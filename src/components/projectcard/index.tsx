@@ -11,7 +11,7 @@ const Projectcard = (props: ProjectcardProps) => {
                 <StyledPrjTitle>{props.title}</StyledPrjTitle>
             </div>
             <StyledContentBox>{props.content}</StyledContentBox>
-            <div style={{ display: "flex", gap: "5px" }}>
+            <div style={{ display: "flex", gap: "10px" }}>
                 {props.stacks.map((item, index) => (
                     <img key={index} src={item} alt={`stack-${index}`} style={{ width: "25px" }} />
                     // <StyledStack key={index}>{item}</StyledStack>
