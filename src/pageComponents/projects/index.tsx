@@ -6,9 +6,8 @@ const ProjectPage = () => {
 	return (
 		<StyledContainer>
 			<StyledTitle>Projects</StyledTitle>
-			<StyledText style={{ textAlign: "center" }}>공유하고 싶거나 다시 보고 싶은 기술들을 정리합니다.</StyledText>
-
-			<div style={{ marginTop: "40px", display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
+			<StyledText style={{ textAlign: "center" }}>진행한 프로젝트 모음입니다. </StyledText>
+			<div style={{ marginTop: "40px", display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "15px" }}>
 				<Projectcard
 					title="Bosun Kwak's blog"
 					date="2023.08.21 ~ 진행중 (1명)"
@@ -42,7 +41,14 @@ const ProjectPage = () => {
 					content="여행 일정을 계획하는 웹 프로젝트입니다. "
 					stacks={["/stack/vue.svg", "/stack/spring-color.svg", "/stack/mysql-color.svg"]}
 					gitlink="https://github.com/0214kbs/trip"
-					postlink="/"
+				/>
+				<Projectcard
+					title="개집사"
+					date="2021.07.26 ~ 2021.08.07 (5명)"
+					imgsrc="/projects/dogapp.png"
+					content="반려견을 두고 외출해야하는 사람들을 위한 동네 강아지 산책 서비스입니다. "
+					stacks={["/stack/swift-color.svg", "/stack/firebase-color.svg", "/stack/xcode-color.svg"]}
+					gitlink="https://github.com/0214kbs/Gaejibsa-chatting"
 				/>
 			</div>
 		</StyledContainer >
