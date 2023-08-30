@@ -11,7 +11,7 @@ const ProjectPage = () => {
 			<div style={{ marginTop: "40px", display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
 				<Projectcard
 					title="Bosun Kwak's blog"
-					date="2023.08.21~ (1명)"
+					date="2023.08.21~ 진행중 (1명)"
 					imgsrc="/projects/blogmain.png"
 					content="저만의 블로그 및 포트폴리오 입니다.  "
 					stacks={["/stack/nextjs.svg", "/stack/react.svg", "/stack/typescript.svg", "/stack/styledcomponents-color.svg", "/stack/storybook-color.svg", "/stack/node.svg"]}

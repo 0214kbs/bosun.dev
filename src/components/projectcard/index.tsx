@@ -17,7 +17,7 @@ const Projectcard = (props: ProjectcardProps) => {
                     // <StyledStack key={index}>{item}</StyledStack>
                 ))}
             </div>
-            <div style={{ display: "flex", gap: "5px" }}>
+            <div style={{ display: "flex", gap: "12px" }}>
                 {props.link && <Link href={props.link} style={{ textDecoration: 'none', color: "black", display: "flex" }}>
                     <img src="/link.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
                     <StyledLinkName>바로가기</StyledLinkName>

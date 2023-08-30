@@ -34,12 +34,7 @@ const StyledPrjTitle = styled.h1`
 const StyledContentBox = styled.div`
   font-family: ${(props) => props.theme.fonts.HangeulFontLight};
   font-size: ${(props) => props.theme.fontSizes.small};
-  /* background-color: ${(props) => props.theme.colors.lightgray}; */
-  /* height: 40px; */
-  /* display: flex; */
-  /* align-items: center;    */
-  /* padding-left:10px; */
-  /* border-left: 5px solid ${(props) => props.theme.colors.main}; */
+
   `
 
 const StyledStack = styled.div`
