@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { StyledProjectcard, StyledDate, StyledPrjTitle, StyledContentBox, StyledStack, StyledLinkName } from "./Projectcard.styled"
+import { StyledProjectcard, StyledDate, StyledPrjTitle, StyledContentBox, StyledLinkItem, StyledLinkName } from "./Projectcard.styled"
 import { ProjectcardProps } from "./Projectcard.type"
 
 const Projectcard = (props: ProjectcardProps) => {
@@ -19,16 +19,22 @@ const Projectcard = (props: ProjectcardProps) => {
             </div>
             <div style={{ display: "flex", gap: "12px" }}>
                 {props.link && <Link href={props.link} style={{ textDecoration: 'none', color: "black", display: "flex" }}>
-                    <img src="/link.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
-                    <StyledLinkName>바로가기</StyledLinkName>
+                    <StyledLinkItem>
+                        <img src="/link.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
+                        <StyledLinkName>바로가기</StyledLinkName>
+                    </StyledLinkItem>
                 </Link>}
                 {props.gitlink && <Link href={props.gitlink} style={{ textDecoration: 'none', color: "black", display: "flex" }}>
-                    <img src="/github.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
-                    <StyledLinkName>Github</StyledLinkName>
+                    <StyledLinkItem>
+                        <img src="/github.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
+                        <StyledLinkName>Github</StyledLinkName>
+                    </StyledLinkItem>
                 </Link>}
                 {props.postlink && <Link href={props.postlink} style={{ textDecoration: 'none', color: "black", display: "flex" }}>
-                    <img src="/post.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
-                    <StyledLinkName>관련 포스트</StyledLinkName>
+                    <StyledLinkItem>
+                        <img src="/post.png" style={{ width: "20px", height: "20px", marginRight: "5px" }}></img>
+                        <StyledLinkName>관련 포스트</StyledLinkName>
+                    </StyledLinkItem>
                 </Link>}
             </div>
         </StyledProjectcard >

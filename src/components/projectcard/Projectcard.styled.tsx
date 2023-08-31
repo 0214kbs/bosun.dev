@@ -37,14 +37,19 @@ const StyledContentBox = styled.div`
 
   `
 
-const StyledStack = styled.div`
-  font-family: ${(props) => props.theme.fonts.HangeulFontLight};
-  font-size: ${(props) => props.theme.fontSizes.small};
-  
-  border-radius: 0.5rem;
-  background-color: #a7a7a7;
-  color: ${(props) => props.theme.colors.white};
-  padding: 2px 10px 4px 10px;
+const StyledLinkItem = styled.div`
+  display: flex;
+	align-items: center;
+
+		transition: transform 500ms;
+		color: inherit;
+		fill: inherit;
+
+		&:hover {
+			/* transform: scale(1.1); */
+			color: ${(props) => props.theme.colors.main};
+			fill: ${(props) => props.theme.colors.main};
+		}
   
 `
 
@@ -52,4 +57,4 @@ const StyledLinkName = styled.span`
       font-family: ${(props) => props.theme.fonts.HangeulFontMedium};
       font-size: ${(props) => props.theme.fontSizes.small};
   `
-export { StyledProjectcard, StyledDate, StyledPrjTitle, StyledContentBox, StyledStack, StyledLinkName };
+export { StyledProjectcard, StyledDate, StyledPrjTitle, StyledContentBox, StyledLinkItem, StyledLinkName };
