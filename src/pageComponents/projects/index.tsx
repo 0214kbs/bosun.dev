@@ -20,6 +20,7 @@ const ProjectPage = () => {
 						stacks={project.stacks}
 						gitlink={project.gitlink}
 						link={project.link}
+						postlink={project.postlink}
 					/>
 				))}
 			</StyledProjectcardContainer>
