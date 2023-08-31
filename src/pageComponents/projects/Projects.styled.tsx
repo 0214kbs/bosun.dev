@@ -20,4 +20,12 @@ const StyledText = styled.div`
 	text-align: center;
 	font-size: ${(props) => props.theme.fontSizes.medium};
 `;
-export { StyledContainer, StyledTitle, StyledText };
+
+const StyledProjectcardContainer = styled.div`
+	margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+`
+export { StyledContainer, StyledTitle, StyledText, StyledProjectcardContainer };
