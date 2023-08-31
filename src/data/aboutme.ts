@@ -4,7 +4,8 @@ export const ContactData = ["010-7603-5659", "214kbs@gmail.com"];
 export const CertHeader = ["2021. 12", "2022.02", "2022.03"];
 export const CertData = ["SQL 개발자 자격증 취득", "TOEIC 860점", "TOEIC SPEAKING IH level"];
 
-export const ExpHeader = [["2021", " ~2022"], "2022", "2022", "2021", "2019", "2019"];
+// export const ExpHeader = [["2021~", "2022"], "2022", "2022", "2021", "2019", "2019"];
+export const ExpHeader = ["2021,22", "2022", "2022", "2021", "2019", "2019"];
 export const ExpData = [
 	["학부 연구생", "- 암호 Database 질의 연산 기술 연구"],
 	"코딩 동아리 스터디장으로서 활동",
@@ -14,7 +15,8 @@ export const ExpData = [
 	"과 학생회 사무부장",
 ];
 
-export const EduHeader = ["2023.01~ ing", "2022.08~2022.12", "2019.03~2023.02", "2015.03~2018.02"];
+// export const EduHeader = ["2023.01~ ing", "2022.08~2022.12", "2019.03~2023.02", "2015.03~2018.02"];
+export const EduHeader = ["2023.01~", ["2022.08~", "2022.12"], ["2019.03~", "2023.02"], ["2015.03~", "2018.02"]];
 export const EduData = [
 	"SSAFY(삼성 청년 SW 아카데미)",
 	"TABA (Tmax Tibero, CCCR 협력 프로그램) ",

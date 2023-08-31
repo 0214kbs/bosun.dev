@@ -27,7 +27,7 @@ function HomePage() {
 			<Profile />
 			<div style={{ display: "flex", width: "780px", paddingLeft: "10px", gap: "10px" }}>
 				<div style={{ width: "48%" }}>
-					<StyledTableTitle> 👩‍💻Contact</StyledTableTitle>
+					<StyledTableTitle> 📞Contact</StyledTableTitle>
 					<Table headers={ContanctHeader} data={ContactData} />
 					<StyledTableTitle>🧾Certificate</StyledTableTitle>
 					<Table headers={CertHeader} data={CertData} />
@@ -39,7 +39,7 @@ function HomePage() {
 					<Table headers={EduHeader} data={EduData} />
 					<StyledTableTitle>🏆Award</StyledTableTitle>
 					<Table headers={AwardHeader} data={AwardData} />
-					<StyledTableTitle>✈️English Experience </StyledTableTitle>
+					<StyledTableTitle>🌏English Experience </StyledTableTitle>
 					<Table headers={EngExpHeader} data={EngExpData} />
 				</div>
 			</div>
