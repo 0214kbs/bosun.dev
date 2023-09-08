@@ -6,7 +6,6 @@ import { ThemeProvider } from "styled-components";
 import StyledComponentsRegistry from "./lib/registry";
 import "../styles/globals.css";
 import theme from "../styles/DefaultTheme";
-import { Metadata } from "next";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
