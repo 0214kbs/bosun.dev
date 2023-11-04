@@ -1,10 +1,10 @@
 export const projects = [
 	{
-		title: "와이라노사우르스",
+		title: "와이라노사우루스",
 		date: "2023.08.21 ~ 2023.10.06 (6명)",
 		imgsrc: "/projects/와이라노.png",
 		content: "고성 공룡 엑스포를 중심으로 어린아이를 동반한 가족 맞춤 관광 정보 제공 서비스",
-		stacks: ["/stack/react.svg", "/stack/typescript.svg", "/stack/styledcomponents-color.svg", "/stack/storybook-color.svg", "/stack/node.svg"],
+		stacks: ["/stack/react.svg", "/stack/typescript.svg", "/stack/styledcomponents-color.svg", "/stack/node.svg"],
 		gitlink: "https://github.com/0214kbs/Yrannosaurus",
 	},
 
