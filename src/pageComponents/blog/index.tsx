@@ -2,10 +2,10 @@
 
 import theme from "@/styles/DefaultTheme";
 import { StyledContainer, StyledTitle, StyledText } from "./Blog.styled";
-import Blogpostcard from "@/components/blogpostcard";
+import Blogpostcard from "@/components/common/blogpostcard";
 import { useState } from "react";
 import { categories } from "@/data/category";
-import Button from "@/components/button";
+import Button from "@/components/common/button";
 
 function BlogPage({ posts }: any) {
 	const [select, setSelect] = useState<string>("");

@@ -1,9 +1,8 @@
 "use client";
 
-import theme from "@/styles/DefaultTheme";
 import { StyledContainer, StyledTableTitle, StyledText, StyledTitle } from "./Home.styled";
-import Profile from "./components/profile";
-import Table from "@/components/table";
+import Profile from "../../components/home/profile";
+import Table from "@/components/common/table";
 import {
 	ContanctHeader,
 	ContactData,
