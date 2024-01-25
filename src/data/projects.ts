@@ -1,5 +1,13 @@
 export const projects = [
 	{
+		title: "스트릿푸드파이터",
+		date: "2023.10.09 ~ 2023.11.17 (6명)",
+		imgsrc: "/projects/streetfoodfighter.png",
+		content: "길거리 음식 포장 주문, 펀딩 중개 서비스 ",
+		stacks: ["/stack/nextjs.svg", "/stack/react.svg", "/stack/typescript.svg", "/stack/styledcomponents-color.svg", "/stack/node.svg"],
+		gitlink: "https://github.com/0214kbs/StreetFoodFighter",
+	},
+	{
 		title: "와이라노사우루스",
 		date: "2023.08.21 ~ 2023.10.06 (6명)",
 		imgsrc: "/projects/와이라노.png",
@@ -30,7 +38,7 @@ export const projects = [
 		imgsrc: "/projects/sss.png",
 		content: "공정한 설문 조사 유도 서비스",
 		stacks: ["/stack/nextjs.svg", "/stack/react.svg", "/stack/typescript.svg", "/stack/styledcomponents-color.svg", "/stack/node.svg"],
-		gitlink: "https://github.com/0214kbs/SSS",
+		gitlink: "https://github.com/0214kbs/Special-Survey-Service",
 	},
 	{
 		title: "Design System",
