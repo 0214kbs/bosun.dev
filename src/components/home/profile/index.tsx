@@ -8,11 +8,11 @@ function Profile() {
 				<StyledImg src="/profile.jpg" alt="profile" />
 				<StyledRight>
 					<div>
-						<StyledText bold>👋🏻 끊임없이 성장하고,</StyledText>
-						<StyledText bold paddingLeft>
+						<StyledText $bold>👋🏻 끊임없이 성장하고,</StyledText>
+						<StyledText $bold $paddingLeft>
 							프론트엔드 전문성을 깊게 추구합니다.
 						</StyledText>
-						<StyledText gray>
+						<StyledText $gray>
 							모든 도전을 새로운 학습의 기회로 받아들이며, 프론트엔드 분야의 최신 트렌드와 기술에 항상 집중하고 있습니다.
 							<br />
 							<br />
@@ -20,8 +20,8 @@ function Profile() {
 						</StyledText>
 					</div>
 					<div>
-						<StyledText bold>✈️ 여행을 좋아합니다.</StyledText>
-						<StyledText gray>
+						<StyledText $bold>✈️ 여행을 좋아합니다.</StyledText>
+						<StyledText $gray>
 							현재까지 다녀온 나라 :<span>Guam, Hawaii, Italy, Czech Republic, Austria, Canada, United States, Cebu</span>
 						</StyledText>
 					</div>

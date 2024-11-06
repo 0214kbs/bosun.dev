@@ -13,23 +13,23 @@ const StyledRight = styled.div`
 `;
 
 interface StyledTextProps {
-	bold?: boolean;
-	gray?: boolean;
-	paddingLeft?: boolean;
+	$bold?: boolean;
+	$gray?: boolean;
+	$paddingLeft?: boolean;
 }
 
 const StyledText = styled.div<StyledTextProps>`
 	font-family: ${(props) => props.theme.fonts.HangeulFontRegular};
 
 	${(props) =>
-		props.bold &&
+		props.$bold &&
 		css`
 			font-weight: bold;
 			font-size: ${props.theme.fontSizes.medium};
 		`}
 
 	${(props) =>
-		props.gray &&
+		props.$gray &&
 		css`
 			color: gray;
 			margin-left: 20px;
@@ -38,9 +38,10 @@ const StyledText = styled.div<StyledTextProps>`
 		`}
 
   ${(props) =>
-		props.paddingLeft &&
+		props.$paddingLeft &&
 		css`
 			padding-left: 30px;
 		`}
 `;
+
 export { StyledImg, StyledRight, StyledText };
