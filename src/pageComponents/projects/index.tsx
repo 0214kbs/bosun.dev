@@ -1,13 +1,11 @@
 "use client";
 import Projectcard from "@/components/common/projectcard";
-import { StyledContainer, StyledTitle, StyledText, StyledProjectcardContainer } from "./Projects.styled";
+import { StyledProjectcardContainer } from "./Projects.styled";
 import { projects } from "@/data/projects";
 
 const ProjectPage = () => {
 	return (
-		<StyledContainer>
-			<StyledTitle> Projects</StyledTitle>
-			<StyledText>진행한 프로젝트 모음입니다.</StyledText>
+		<div>
 			<StyledProjectcardContainer>
 				{projects.map((project) => (
 					<Projectcard
@@ -23,7 +21,7 @@ const ProjectPage = () => {
 					/>
 				))}
 			</StyledProjectcardContainer>
-		</StyledContainer>
+		</div>
 	);
 };
 
