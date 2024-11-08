@@ -2,7 +2,7 @@
 
 import { allPosts } from "contentlayer/generated";
 import { usePathname } from "next/navigation";
-import Blogpost from "@/pageComponents/blogpost";
+import Blogpost from "@/components/blog/blogpost";
 
 function Post() {
 	const slug = usePathname().split("/").pop();
