@@ -1,5 +1,5 @@
 import PageTitle from "@/components/common/pagetitle";
-import HomePage from "@/pageComponents/home";
+import HomePage from "@/components/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
