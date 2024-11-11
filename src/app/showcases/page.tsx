@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 	authors: [{ name: "BosunKwak", url: "https://bosun-dev.vercel.app/" }],
 };
 
-export default function Showcases() {
+export default function ShowCases() {
 	return (
 		<div style={{ maxWidth: "1030px", margin: "auto", padding: "0 8px", paddingTop: "6.5rem" }}>
 			<PageTitle title="Showcases" text="개발한 컴포넌트 모음입니다. "></PageTitle>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { showcase_tags } from "@/data/category";
+import { showcase_items } from "@/data/showcases";
 import TagList from "@/components/common/taglist";
 import ShowCaseCard from "../common/showcasecard";
 
@@ -11,18 +12,16 @@ function ShowCaseList() {
 		setSelect(keyword);
 	};
 
+	const filteredItems = showcase_items.filter((item) => select === "" || item.project === select);
+
 	return (
 		<>
 			<TagList categories={showcase_tags} select={select} onSelect={handleSelect} />
 
 			<div style={{ marginTop: "40px", display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "15px" }}>
-				{/* TODO : ShowCase Card */}
-				<ShowCaseCard
-					title="scratch"
-					des="설문조사서비스에서 당첨 여부를 확인할 때, 복권 긁는 듯한 효과를 주기 위해 만들었습니다. "
-					imgsrc="/bosun.png"
-					slug="scratch"
-				/>
+				{filteredItems.map((item) => (
+					<ShowCaseCard key={item.slug} title={item.title} des={item.des} imgsrc={item.imgsrc} slug={item.slug} />
+				))}
 			</div>
 		</>
 	);

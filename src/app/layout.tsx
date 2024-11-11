@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<body>
 					<StyledComponentsRegistry>
 						<Navbar />
-						<div style={{ minHeight: "80vh" }}>{children}</div>
+						<div style={{ minHeight: `calc(100vh - 215px)` }}>{children}</div>
 						<Footer />
 					</StyledComponentsRegistry>
 					<Analytics />
