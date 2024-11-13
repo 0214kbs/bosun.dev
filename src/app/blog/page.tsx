@@ -1,6 +1,7 @@
 import { allPosts } from "contentlayer/generated";
-import BlogPage from "@/pageComponents/blog";
 import { Metadata } from "next";
+import PageTitle from "@/components/common/pagetitle";
+import BlogPage from "@/components/blog";
 
 export const metadata: Metadata = {
 	title: "Bosun's Blog",
@@ -17,5 +18,10 @@ async function fetchPosts() {
 export default async function Blog() {
 	const { posts } = await fetchPosts();
 
-	return <BlogPage posts={posts} />;
+	return (
+		<div style={{ maxWidth: "1030px", margin: "auto", padding: "0 8px", paddingTop: "6.5rem" }}>
+			<PageTitle title="Blog" text="공유하고 싶거나 다시 보고 싶은 기술들을 정리합니다."></PageTitle>
+			<BlogPage posts={posts} />
+		</div>
+	);
 }

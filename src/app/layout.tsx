@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import StyledComponentsRegistry from "./lib/registry";
 import "../styles/globals.css";
 import theme from "../styles/DefaultTheme";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -14,9 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<body>
 					<StyledComponentsRegistry>
 						<Navbar />
-						{children}
+						<div style={{ minHeight: `calc(100vh - 215px)` }}>{children}</div>
 						<Footer />
 					</StyledComponentsRegistry>
+					<Analytics />
 				</body>
 			</ThemeProvider>
 		</html>

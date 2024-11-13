@@ -1,6 +1,6 @@
 "use client";
 
-import { StyledContainer, StyledTableTitle, StyledText, StyledTitle } from "./Home.styled";
+import { StyledTableTitle } from "./Home.styled";
 import Profile from "../../components/home/profile";
 import Table from "@/components/common/table";
 import {
@@ -20,9 +20,7 @@ import {
 
 function HomePage() {
 	return (
-		<StyledContainer>
-			<StyledTitle> About Me </StyledTitle>
-			<StyledText>Bosun Kwak에 대한 간단한 소개입니다.</StyledText>
+		<div>
 			<Profile />
 			<div style={{ display: "flex", width: "780px", paddingLeft: "10px", gap: "10px" }}>
 				<div style={{ width: "48%" }}>
@@ -42,7 +40,7 @@ function HomePage() {
 					<Table headers={EngExpHeader} data={EngExpData} />
 				</div>
 			</div>
-		</StyledContainer>
+		</div>
 	);
 }
 
