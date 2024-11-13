@@ -17,6 +17,7 @@ const StyledCardContainer = styled.div`
 			padding: 15px;
 			gap: 15px;
 			margin-bottom: 15px;
+			height: 320px;
 
 			&:hover {
 				background-color: ${lightgray};
