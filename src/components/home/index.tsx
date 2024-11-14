@@ -22,7 +22,7 @@ function HomePage() {
 	return (
 		<div>
 			<Profile />
-			<div style={{ display: "flex", width: "780px", paddingLeft: "10px", gap: "10px" }}>
+			<div style={{ display: "flex", width: "860px", paddingLeft: "10px", gap: "10px" }}>
 				<div style={{ width: "48%" }}>
 					<StyledTableTitle> 📞Contact</StyledTableTitle>
 					<Table headers={ContanctHeader} data={ContactData} />
