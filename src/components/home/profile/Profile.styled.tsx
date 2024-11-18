@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const StyledRight = styled.div`
 	width: 55%;
+	min-width: 380px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
