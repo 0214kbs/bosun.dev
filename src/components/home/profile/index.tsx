@@ -5,7 +5,7 @@ function Profile() {
 	return (
 		<section>
 			<div style={{ display: "flex", justifyContent: "space-between", marginTop: "20px", padding: "20px" }}>
-				<Image width={290} height={400} style={{ borderRadius: "1rem" }} src="/profile.jpg" alt="profile" />
+				<Image width={290} height={400} style={{ borderRadius: "1rem" }} src="/profile.jpg" alt="profile" priority />
 				<StyledRight>
 					<div>
 						<StyledText $bold>👋🏻 끊임없이 성장하고,</StyledText>
