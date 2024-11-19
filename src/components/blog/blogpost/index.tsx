@@ -2,8 +2,13 @@
 
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { StyledContainer, StyledTitle, StyledPost } from "./Blogpost.styled";
+import { Post } from "@/contentlayer/generated/types";
 
-function Blogpost({ post }: any) {
+type BlogpostProps = {
+	post: Post;
+};
+
+function Blogpost({ post }: BlogpostProps) {
 	// console.log(post.body.code);
 	const MDXComponent = useMDXComponent(post.body.code);
 
