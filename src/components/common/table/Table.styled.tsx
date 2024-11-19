@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 
-const StyledHeader = styled.td.attrs<any>((props) => ({}))`
+const StyledHeader = styled.td`
 	${(props) => {
 		const font = props.theme.fonts.HangeulFontMedium;
-		const main = props.theme.colors.main;
 		return css`
 			font-family: ${font};
 			padding: 6px 5px;
