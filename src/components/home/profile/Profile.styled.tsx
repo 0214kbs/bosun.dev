@@ -1,12 +1,8 @@
 import styled, { css } from "styled-components";
 
-const StyledImg = styled.img`
-	border-radius: 1rem;
-	width: 290px;
-	height: 390.938px;
-`;
 const StyledRight = styled.div`
 	width: 55%;
+	min-width: 380px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -44,4 +40,4 @@ const StyledText = styled.div<StyledTextProps>`
 		`}
 `;
 
-export { StyledImg, StyledRight, StyledText };
+export { StyledRight, StyledText };

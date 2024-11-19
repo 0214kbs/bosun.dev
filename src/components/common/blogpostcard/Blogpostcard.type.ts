@@ -1,6 +1,6 @@
 export interface BlogPostProps {
-    date: string;
-    title: string;
-    des: string;
-    slug: string;
+	date: string;
+	title: string;
+	des: string;
+	slug: string;
 }

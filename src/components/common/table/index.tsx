@@ -1,15 +1,20 @@
 import { StyledData, StyledHeader } from "./Table.styled";
 
-const Table = ({ headers, data }: any) => {
+interface TableProps {
+	headers: (string | string[])[];
+	data: (string | string[])[];
+}
+
+const Table = ({ headers, data }: TableProps) => {
 	return (
 		<div>
-			<table style={{ marginLeft: "35px", marginTop: "10px" }}>
+			<table style={{ marginLeft: "18px", marginTop: "10px" }}>
 				<tbody>
-					{data.map((row: any, rowIndex: any) => (
+					{data.map((row, rowIndex) => (
 						<tr key={rowIndex}>
 							<StyledHeader>
 								{Array.isArray(headers[rowIndex])
-									? headers[rowIndex].map((line: any, lineIndex: any) => (
+									? (headers[rowIndex] as string[]).map((line, lineIndex) => (
 											<span key={lineIndex}>
 												{line}
 												{lineIndex !== headers[rowIndex].length - 1 && <br />}

@@ -1,8 +1,4 @@
-import styled, { css, DefaultTheme } from "styled-components";
-
-interface DefaultProps {
-	theme: DefaultTheme;
-}
+import styled, { css } from "styled-components";
 
 const StyledCardContainer = styled.div`
 	${(props) => {
